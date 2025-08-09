@@ -21,10 +21,10 @@ const signUp = async () => {
   try {
     const res = await axios.post(`${api}/users/sign_up`, registerForm.value)
     registerForm.value = {
-  email: '',
-  password: '',
-  nickname: '',
-}
+      email: '',
+      password: '',
+      nickname: '',
+    }
     alert(`註冊成功`)
   } catch (error) {
     const msg = error.response?.data?.message || '發生未知錯誤'
@@ -36,7 +36,6 @@ const signUp = async () => {
 const loginForm = ref({
   email: '',
   password: '',
-  nickname: '',
 })
 
 const todoToken = ref('')
@@ -56,10 +55,9 @@ const signIn = async () => {
     document.cookie = `todoToken=${todoToken.value}; expires=${expireDate.toUTCString()}; path=/`
 
     loginForm.value = {
-  email: '',
-  password: '',
-  nickname: '',
-}
+      email: '',
+      password: '',
+    }
     alert(`登入成功，您好：${res.data.nickname}！`)
   } catch (error) {
     const msg = error.response?.data?.message || '發生未知錯誤'
@@ -135,7 +133,7 @@ const getTodos = async () => {
     todos.value = res.data.data
   } catch (error) {
     const msg = error.response?.data?.message || '發生未知錯誤'
-    alert(`登入失敗，原因：${msg}`)
+    alert(`取得代辦事項失敗，原因：${msg}`)
   }
 }
 
@@ -332,6 +330,6 @@ const toggleStatus = async (todo_id) => {
     </div>
     <div v-else>
       <p>請先登入並完成驗證</p>
-    </div v-else>
+    </div>
   </div>
 </template>
