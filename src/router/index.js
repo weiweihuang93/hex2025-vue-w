@@ -9,6 +9,16 @@ const router = createRouter({
       name: 'home',
       component: HomeView,
     },
+    {
+      path: '/week1',
+      name: 'week1',
+      component: () => import('../views/Week1.vue'),
+    },
+    {
+      path: '/week2',
+      name: 'week2',
+      component: () => import('../views/Week2.vue'),
+    },
   ],
 })
 
