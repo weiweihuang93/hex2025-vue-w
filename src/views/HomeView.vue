@@ -7,6 +7,7 @@
       <ul>
         <li class="py-3"><RouterLink to="/week1">第一週 - 餐點管理工具</RouterLink></li>
         <li class="py-3"><RouterLink to="/week2">第二週 - 串接 Todo List API</RouterLink></li>
+        <li class="py-3"><RouterLink to="/week3">第三週 - 餐點管理工具</RouterLink></li>
       </ul>
     </div>
   </div>
